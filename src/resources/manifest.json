@@ -1,8 +1,8 @@
 {
   "Group": "REPLACE_WITH_YOUR_GROUP_ID",
-  "Name": "REPLACE_WITH_YOUR_MOD_NAME",
-  "Version": "REPLACE_WITH_YOUR_VERSION",
-  "Description": "REPLACE_WITH_YOUR_DESCRIPTION",
+  "Name": "REPLACE_WITH_YOUR_PLUGIN_NAME",
+  "Version": "REPLACE_WITH_YOUR_PLUGIN_VERSION",
+  "Description": "REPLACE_WITH_YOUR_PLUGIN_DESCRIPTION",
   "Authors": [
     {
       "Name": "REPLACE_WITH_YOUR_NAME",
@@ -10,7 +10,7 @@
       "Url": "REPLACE_WITH_YOUR_WEBSITE"
     }
   ],
-  "Website": "REPLACE_WITH_YOUR_MOD_WEBSITE",
+  "Website": "REPLACE_WITH_YOUR_PLUGIN_WEBSITE",
   "ServerVersion": "*",
   "Dependencies": {},
   "OptionalDependencies": {},
