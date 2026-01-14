@@ -26,6 +26,7 @@ tasks {
     }
     javadoc {
         options.encoding = "UTF-8"
+        (options as CoreJavadocOptions).addStringOption("Xdoclint:none", "-quiet")
     }
 }
 
