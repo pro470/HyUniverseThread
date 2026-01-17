@@ -31,7 +31,8 @@ and added to your project as a dependency, done by the ``eu.koboo.pluginmanifest
 
 ## Tutorials:
 
-- [Intro to Hytale's Entity-Component-System](https://forum.hytalemodding.dev/d/20-intro-to-hytale-entity-component-system)
+- [Intro to Hytale's Entity-Component-System (HytaleModding forum)](https://forum.hytalemodding.dev/d/20-intro-to-hytale-entity-component-system)
+- [Hytale's Entity-Component-System Explained (YouTube)](https://youtu.be/qglU107_DA4?si=5RemzLqtBlER6HIp)
 - [Thread Safety: Using world.execute()](https://forum.hytalemodding.dev/d/21-thread-safety-using-worldexecute)
 
 ## Advanced Tutorials
