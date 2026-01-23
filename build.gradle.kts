@@ -7,7 +7,7 @@ plugins {
     // So if you build this project with "shadowJar" the JAR file name will be:
     // "hytale-plugin-template-1.0.0-all.jar"
     id("com.gradleup.shadow") version("9.3.1")
-    id("eu.koboo.pluginmanifest") version("1.0.24")
+    id("eu.koboo.pluginmanifest") version("1.0.25")
 }
 
 group = "eu.koboo"
@@ -24,6 +24,7 @@ repositories {
 
 dependencies {
     // Here you can add your own dependencies.
+    //compileOnly("com.hypixel.hytale:Server:2026.01.22-6f8bdbdc4")
 }
 
 pluginManifest {
@@ -38,6 +39,8 @@ pluginManifest {
 
     runtimeConfiguration {
         runtimeDirectory = "D:/PluginManifestRuntime"
+//        runtimeDirectory = "run/"
+        isProjectRelative = false
     }
 }
 
