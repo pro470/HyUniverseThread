@@ -2,35 +2,47 @@ package com.techphonesnews.HyUniverseThread;
 
 import com.hypixel.hytale.server.core.plugin.JavaPlugin;
 import com.hypixel.hytale.server.core.plugin.JavaPluginInit;
+import com.hypixel.hytale.server.core.util.Config;
 
 import javax.annotation.Nonnull;
 
 public class HyUniverseThread extends JavaPlugin {
 
+    private static HyUniverseThread INSTANCE;
+
+    private UniverseThread universeThread;
+    private final Config<HyUniverseConfig> config;
+
     public HyUniverseThread(@Nonnull JavaPluginInit init) {
         super(init);
+        INSTANCE = this;
+        config = this.withConfig(UniverseThread.name, HyUniverseConfig.CODEC);
     }
 
     @Override
     protected void setup() {
         getLogger().atInfo().log("MyPlugin was successfully setup!");
         super.setup();
+        universeThread = new UniverseThread(config.get());
+        universeThread.setup();
     }
 
     @Override
     protected void start() {
-        // You can disable core plugins here
-        // Uncomment to disable Hytale's Teleport plugin
-        //PluginIdentifier identifier = PluginIdentifier.fromString("Hytale:Teleport");
-        //HytaleServer.get().getPluginManager().unload(identifier);
-        // You can also override previously registered command here,
-        // by registering in "start()" instead of "setup()"
         super.start();
+        universeThread.start();
     }
 
     @Override
     protected void shutdown() {
         getLogger().atInfo().log("MyPlugin was successfully shutdown!");
         super.shutdown();
+        universeThread.stop();
+        config.save();
     }
+
+    public static HyUniverseThread get() {
+        return INSTANCE;
+    }
+
 }

@@ -22,7 +22,7 @@ repositories {
 
 dependencies {
     // Here you can add your own dependencies.
-    //compileOnly("com.hypixel.hytale:Server:2026.01.22-6f8bdbdc4")
+    compileOnly("com.hypixel.hytale:Server:2026.02.06-aa1b071c2")
 }
 
 pluginManifest {
