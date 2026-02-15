@@ -15,6 +15,12 @@ group = "com.techphonesnews"
 version = "1.0.2"
 
 repositories {
+    mavenLocal()
+    mavenCentral()
+    maven {
+        name = "hytale-release"
+        url = uri("https://maven.hytale.com/release")
+    }
     maven {
         name = "entixReposilite"
         url = uri("https://repo.entix.eu/releases")
