@@ -65,6 +65,11 @@ public class UniverseThread extends TickingThread implements Executor, ExecutorM
     }
 
     @Override
+    protected boolean isIdle() {
+        return REGISTRY.getData().getSystemSize() == 1;
+    }
+
+    @Override
     protected void tick(float dt) {
         if (this.alive.get()) {
             TimeResource worldTimeResource = this.store.getResource(this.timeResourceType);
