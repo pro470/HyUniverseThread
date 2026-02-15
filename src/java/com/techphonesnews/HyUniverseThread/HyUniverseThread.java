@@ -21,7 +21,6 @@ public class HyUniverseThread extends JavaPlugin {
 
     @Override
     protected void setup() {
-        getLogger().atInfo().log("MyPlugin was successfully setup!");
         super.setup();
         universeThread = new UniverseThread(config.get());
         universeThread.setup();
@@ -35,7 +34,6 @@ public class HyUniverseThread extends JavaPlugin {
 
     @Override
     protected void shutdown() {
-        getLogger().atInfo().log("MyPlugin was successfully shutdown!");
         super.shutdown();
         universeThread.stop();
         config.save();
