@@ -11,7 +11,7 @@ plugins {
     id("eu.koboo.pluginmanifest") version ("1.0.25")
 }
 
-group = "com.techphonesnews"
+group = "com.techphonesnews.HyUniverseThread"
 version = "1.0.2"
 
 repositories {
