@@ -1,5 +1,6 @@
 plugins {
     id("java")
+    `maven-publish`
     // This plugin creates a task named "shadowJar".
     // It puts/includes/shades/shadows (basically every previous word describes the same thing)
     // all your dependencies marked with "implementation" into your final JAR file.
@@ -11,7 +12,7 @@ plugins {
 }
 
 group = "com.techphonesnews"
-version = "1.0.0"
+version = "1.0.2"
 
 repositories {
     maven {
@@ -57,6 +58,14 @@ java {
     toolchain.languageVersion.set(JavaLanguageVersion.of(25))
     withSourcesJar()
     withJavadocJar()
+}
+
+publishing {
+    publications {
+        create<MavenPublication>("maven") {
+            from(components["java"])
+        }
+    }
 }
 
 tasks {
