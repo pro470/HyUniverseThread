@@ -87,7 +87,9 @@ public class UniverseThread extends TickingThread implements Executor, ExecutorM
     }
 
     protected void onStart() {
-        DiskResourceStorageProvider.DiskResourceStorage resourceStorage = new DiskResourceStorageProvider.DiskResourceStorage(HyUniverseThread.get().getDataDirectory().resolve("resources"));
+        Universe.get().getUniverseReady().join();
+        DiskResourceStorageProvider.DiskResourceStorage
+            resourceStorage = new DiskResourceStorageProvider.DiskResourceStorage(HyUniverseThread.get().getDataDirectory().resolve("resources"));
         this.store = REGISTRY.addStore(Objects.requireNonNull(Universe.get().getDefaultWorld()).getEntityStore(), resourceStorage, (store) -> this.store = store);
     }
 

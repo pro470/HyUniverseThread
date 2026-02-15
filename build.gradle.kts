@@ -39,6 +39,11 @@ pluginManifest {
                 email = "techphonesnews@gmail.com"
             }
         }
+        pluginDependencies {
+            required(
+                "Hytale:Universe"
+            )
+        }
     }
 
     runtimeConfiguration {
