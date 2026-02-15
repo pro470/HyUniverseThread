@@ -12,7 +12,7 @@ plugins {
 }
 
 group = "com.techphonesnews.HyUniverseThread"
-version = "1.0.2"
+version = "1.0.3"
 
 repositories {
     mavenLocal()
@@ -90,7 +90,6 @@ tasks {
 
 sourceSets {
     main {
-        java.setSrcDirs(listOf("src/java"))
         resources.setSrcDirs(listOf("src/resources"))
     }
     // We don't need test sources, we test it on the server itself.
