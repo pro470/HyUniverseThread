@@ -36,7 +36,7 @@ pluginManifest {
     // Nothing to configure.
     // The plugin already does most of the things for us. :)
     // https://github.com/Koboo/hytale-pluginmanifest
-
+    addClientServerDependency = false // Defaults to true
     manifestConfiguration {
         pluginGroup = "techphonesnews"
         pluginName = "HyUniverseThread"
@@ -90,6 +90,7 @@ tasks {
 
 sourceSets {
     main {
+        java.setSrcDirs(listOf("src/java"))
         resources.setSrcDirs(listOf("src/resources"))
     }
     // We don't need test sources, we test it on the server itself.
